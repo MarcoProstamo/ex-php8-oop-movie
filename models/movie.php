@@ -5,6 +5,7 @@
         public $release_year;
         public $genres;
         protected $budget;
+        use BestActor;
 
         public function __construct($_title, $_director, $_release_year, Genre $_genres, $_budget){
             $this->title = $_title;
