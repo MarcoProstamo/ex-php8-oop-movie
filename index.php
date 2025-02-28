@@ -4,13 +4,15 @@
         public $title;
         public $director;
         public $release_year;
+        public $genres;
         protected $budget;
 
-        public function __construct($_title, $_director, $_release_year, $_budget){
+        public function __construct($_title, $_director, $_release_year, array $_genres, $_budget){
             $this->title = $_title;
             $this->director = $_director;
             $this->release_year = $_release_year;
-            $this->budget = $_budget;
+            $this->genres = $_genres;
+            $this->budget = $_budget . "$";
         }
         
         public function getBudget(){
@@ -18,6 +20,10 @@
         }
     }
 
+    $movie1 = new Movie("The Dark Knight", "Christopher Nolan", 2008, ["action", "hero", "crime"], 185000000);
+    $movie2 = new Movie("The Shawshank Redemption", "Frank Darabont", 1994, ["drama", "crime"], 25000000);
+    var_dump($movie1);
+    var_dump($movie2);
 ?>
 
 
